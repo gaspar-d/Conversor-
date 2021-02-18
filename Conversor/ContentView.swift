@@ -58,7 +58,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                Section{
+                Section(header: Text("Temperature")
+                            .bold()
+                            .font(.title3)
+                            .textCase(nil)
+                            .padding(.bottom)
+                ) {
                     TextField("Enter a value to convert...", text: $inputValue).keyboardType(.decimalPad)
                 }
                 
